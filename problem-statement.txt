@@ -1,0 +1,11 @@
+Upload the CSV le to the database.
+Write a functional back-end and front-end using the tech stacks mentioned below.
+When a user clicks on a listed item (cricket match), comprehensive info about the match must be displayed on a separate dedicated page.
+The data sharing between the back-end and the front-end must be in JSON via REST APIs.
+Writing tests should be a part of the submission.
+Custom design, font, and icons must be used to make the web app more user - friendly.
+Implement sign-up, log in and log out functionalities. You have to create the userauth schema in the database.
+Implement a functionality that allows users to choose their favourite team. When the user chooses their favourite team, the color theme of the web app should change to the color of that team and the team’s logo should appear in the background.
+Implement a functionality in the front-end to search for a team’s matches using the team name.
+Provide a filter based on the various years (seasons) of the tournament on the front- end. Choosing a year(s) should show only the matches from those years.
+Implement paging to display the results properly on the front-end.

@@ -1,0 +1,38 @@
+version: "2"
+services:
+    client:
+        build: ./react-front-end
+        # restart: always
+        ports:
+            - "3000:3000"
+        # volumes:
+        #     - ./react-front-end:/client
+        links:
+            - api
+        networks:
+            - webappnetwork
+    api:
+        build: ./node-back-end
+        # restart: always
+        ports:
+            - "9000:9000"
+        # volumes:
+        #     - ./node-back-end:/api
+        depends_on:
+            - mongodb
+        networks:
+            - webappnetwork
+    mongodb:
+        image: mongo
+        # restart: always
+        container_name: mongodb
+        volumes:
+            - ./db-data:/data/db
+        # ports:
+        #     - 27017:27017
+        command: mongod --noauth
+        networks:
+            - webappnetwork
+networks:
+    webappnetwork:
+        driver: bridge
